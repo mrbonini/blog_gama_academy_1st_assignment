@@ -28,9 +28,12 @@
             </p>
             <label>
                 Hora:  
-                   <input id="test" type="text" name="data_hora"> <script>
+                    <select name="data_hora"> 
+                        <option id="test"></option>
+                    </select>
+                       <script>
                         var date = new Date();
-                        document.getElementById("test").innerHTML = date.getFullYear() + '-' + date.getMonth() + '-' + date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
+                        document.getElementById("test").innerText = (date.getFullYear() + '-' + date.getMonth() + '-' + date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds());
                     </script>
                 
             </label>
