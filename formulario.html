@@ -23,6 +23,22 @@
                 <label>Nome: <input type="text" name="nome"> </label>
             </p>
 
+            <label class="ocultar">
+                <select name = "ip">
+                    <option id="ip"></option>
+                </select>
+            </label>
+            <script type="application/javascript">
+                function getIP(json) {
+                  document.getElementById("ip").innerText = json.ip;
+                }
+            </script>
+              
+            <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+            
+            <p>
+                <label>Pessoa: <input type="radio" name="tipo" value="B2B"> Jurídica <input type="radio" name="tipo" value="B2C" > Física</label>
+            </p>
             
             <label class="ocultar">
                 Hora:  
@@ -37,10 +53,7 @@
                 
             </label>
             
-            <p>
-                    <label>Pessoa: <input type="radio" name="tipo" value="B2B"> Jurídica <input type="radio" name="tipo" value="B2C" > Física</label>
-                </p>
-            <p>
+            
                 <button type="submit">Enviar</button>
             </p>
         </form>
