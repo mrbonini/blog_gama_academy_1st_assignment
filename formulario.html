@@ -22,9 +22,22 @@
             <p>
                 <label>Nome: <input type="text" name="nome"> </label>
             </p>
+
             <p>
                 <label>Pessoa: <input type="radio" name="tipo" value="B2B"> Jurídica <input type="radio" name="tipo" value="B2C" > Física</label>
             </p>
+
+            <p id="test">
+
+            </p>
+
+            <script>
+
+                var date = new Date();
+                document.getElementById("test").innerHTML = date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+
+            </script>
+
             <p>
                 <button type="submit">Enviar</button>
             </p>
