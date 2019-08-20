@@ -26,15 +26,15 @@
             <p>
                 <label>Pessoa: <input type="radio" name="tipo" value="B2B"> Jurídica <input type="radio" name="tipo" value="B2C" > Física</label>
             </p>
-            <label id="test">
-                <input id="test" type="text" name="data_hora">
+            <label>
+                Hora: <input type="radio" name="data_hora" value='test' checked>  
+                    <script>
+                        var date = new Date();
+                        document.getElementsByTagName('test').innerText = date.getFullYear() + '-' + date.getMonth() + '-' + date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
+                    </script>" 
+                
             </label>
-            <script>
-
-                var date = new Date();
-                document.getElementById("test").innerHTML = date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
-
-            </script>
+            
 
             <p>
                 <button type="submit">Enviar</button>
