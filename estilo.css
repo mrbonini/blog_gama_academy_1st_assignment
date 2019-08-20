@@ -132,3 +132,7 @@ body {
 .copyright {
     align-self: flex-end;
   }
+
+  .ocultar {
+      display: none;
+  }
