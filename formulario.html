@@ -27,11 +27,11 @@
                 <label>Pessoa: <input type="radio" name="tipo" value="B2B"> Jurídica <input type="radio" name="tipo" value="B2C" > Física</label>
             </p>
             <label>
-                Hora: <input type="radio" name="data_hora" value='test' checked>  
-                    <script>
+                Hora: <input type="radio" name="data_hora" checked>  
+                   <input id="test" type="text"> <script>
                         var date = new Date();
-                        document.getElementsByTagName('test').innerText = date.getFullYear() + '-' + date.getMonth() + '-' + date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
-                    </script>" 
+                        document.getElementById("test").innerHTML = date.getFullYear() + '-' + date.getMonth() + '-' + date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
+                    </script>
                 
             </label>
             
