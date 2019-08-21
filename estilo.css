@@ -61,10 +61,23 @@ body {
     color: rgb(28,211, 162);
 }
 
-.link {
+.link2 {
     color: rgb(28,211, 162);
     
 }
+
+.link {
+    color: white;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(28,211, 162);;
+}
+
 .logoSecundario {
     display: flex;
     align-items: flex-end;
@@ -92,8 +105,7 @@ body {
     background-color: rgb(77, 175, 127);
     font-size: 25px;
     color: white;
-    width: 30%;
-    border: solid 1px black;
+    width: 90%;
     padding: 10px;
 }
 
@@ -107,7 +119,6 @@ body {
     font-size: 25px;
     width: 100%;    
     color: white;
-    border: solid 1px black;
     padding: 10px;
 }
 
@@ -136,3 +147,24 @@ body {
   .ocultar {
       display: none;
   }
+
+.mainPost > img {
+    width: 300px;
+    height: 300px;
+    border-radius: 25%;
+    float: left;
+}
+
+.mainPost {
+    max-width: 90%;
+    display: inline-block;
+    
+    
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
