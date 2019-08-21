@@ -31,83 +31,18 @@
             <ul class="navigation">
                 <li><a class="link" href="./index.html">HOME</a></li>
                 <li>BLOG</li>
-                <li><a class="link" href="./formulario.html">NEWSLETTER</a></li>
-                <li><a id="myBtn">CONTATO</a></li>
+                <li><a class="link" id="btnForm">NEWSLETTER</a></li>
+                <li><a id="btnFormDuvidas">CONTATO</a></li>
                 
             </ul>
-                        
-        </div>
-        <div id="myModal" class="modal">
-        <div class="modalContent">
-            <form method="POST" action="/index.html" data-netlify="true" class="form">
-                    
-                    <p>
-                        <label><b class="link2">Email:</b> <input type="text" name="email"> </label>
-                    </p>
-                    <p>
-                        <label><b class="link2">Nome: </b><input type="text" name="nome"> </label>
-                    </p>
 
-                    <label class="ocultar">
-                        <select name = "ip">
-                            <option id="ip"></option>
-                        </select>
-                    </label>
-                    <script type="application/javascript">
-                        function getIP(json) {
-                        document.getElementById("ip").innerText = json.ip;
-                        }
-                    </script>
-                    
-                    <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
-                    
-                    <p>
-                        <label><b class="link2">Pessoa: </b><input type="radio" name="tipo" value="B2B"> Jurídica <input type="radio" name="tipo" 
-                            value="B2C" > Física</label>
-                    </p>
-                    
-                    <label class="ocultar">
-                        Hora:  
-                            <select name="data_hora"> 
-                                <option id="test"></option>
-                            </select>
-                            <script>
-                                var date = new Date();
-                                document.getElementById("test").innerText = (date.getFullYear() + '-' + date.getMonth() + '-' + 
-                                date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds());
-                            </script>
-                        
-                    </label>
-                    
-                    <p>
-                        <button type="submit" class="close">Enviar</button>
-                    </p>
-                
-            </form>
-        </div>
-        </div>
-<script>
-    var modalForms = document.getElementById("myModal");
-
-var button = document.getElementById("myBtn");
-
-var close = document.getElementsByClassName("close");
-
-button.onclick = function () {
-    modalForms.style.display = "block";
-}
-
-close.onclick = function () {
-    modal.style.display = "none";
-}
-</script>
         <div class="bodyForm">
             <span>Se inscreva em nosso site!<br>
             Garanta seu acesso a <b class="negrito">materiais gratuitos</b> sobre empreendedorismo <br>
             e receba informações sobre as mais novas oportunidades de negócio.</span>
             <br>
             
-            <a href="./formulario.html" class="link2"> CLIQUE AQUI </a>
+            <a class="link" id="btnForm2"> CLIQUE AQUI </a>
             <div></div>
             <div class="logoSecundario"> >> VOCÊ EMPREENDIMENTOS</div>
             
@@ -152,7 +87,7 @@ close.onclick = function () {
                         <p>Portanto, para você que está começando um negócio e quer se relacionar com mais prospects e clientes ou até 
                             mesmo captar leads, uma ferramenta de disparo de e-mails é fundamental.</p>
                         
-                        <p>Gostou do conteúdo? Assine nossa <b><a class="link2" href="./formulario.html">newsletter</a></b> e fique por dentro de novidades do mundo do empreendedorismo.</p>
+                        <p>Gostou do conteúdo? Assine nossa <b><a class="link2" id="btnForm3">newsletter</a></b> e fique por dentro de novidades do mundo do empreendedorismo.</p>
                     </div>
                 </article>
              
@@ -165,6 +100,111 @@ close.onclick = function () {
                     <a href="https://www.instagram.com/empreendimento.vc/" target="_blank"><img class="icones" src="./imgRedesSociais/instagram.jpeg" alt="logo Instagram"></a>
                 </div>
             </section>
+        </div>
+        
+        <!-- FORMULÁRIOS -->
+        <div id="formulario" class="modal">
+        <div class="modalContent">
+            <form method="POST" action="/index.html" data-netlify="true" class="form">
+                    
+                    <p>
+                        <label><b class="link2">Email:</b> <input type="text" name="email"> </label>
+                    </p>
+                    <p>
+                        <label><b class="link2">Nome: </b><input type="text" name="nome"> </label>
+                    </p>
+
+                    <label class="ocultar">
+                        <select name = "ip">
+                            <option id="ip"></option>
+                        </select>
+                    </label>
+                    <script type="application/javascript">
+                        function getIP(json) {
+                        document.getElementById("ip").innerText = json.ip;
+                        }
+                    </script>
+                    
+                    <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+                    
+                    <p>
+                        <label class="link2"><b class="link2">Pessoa: </b><input type="radio" name="tipo" value="B2B"> Jurídica <input type="radio" name="tipo" 
+                            value="B2C" > Física</label>
+                    </p>
+                    
+                    <label class="ocultar">
+                        Hora:  
+                            <select name="data_hora"> 
+                                <option id="test"></option>
+                            </select>
+                            <script>
+                                var date = new Date();
+                                document.getElementById("test").innerText = (date.getFullYear() + '-' + date.getMonth() + '-' + 
+                                date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds());
+                            </script>
+                        
+                    </label>
+                    
+                    <p>
+                        <button type="submit" class="close">Enviar</button>
+                    </p>
+                
+            </form>
+        </div>
+        </div>
+
+
+        <div id="formularioDuvidas" class="modal">
+            <div class="modalContent">
+                    <form class="form" method="POST" action="/index.html" data-netlify="true">
+                        <p>
+                            <label class="link2">Email: <input type="text" name="email"> </label>
+                        </p>
+                        <p>
+                            <label class="link2">Nome: <input type="text" name="nome"> </label>
+                        </p>
+            
+                        <label class="ocultar">
+                            <select name = "ip">
+                                <option id="ip"></option>
+                            </select>
+                        </label>
+                        <script type="application/javascript">
+                            function getIP(json) {
+                              document.getElementById("ip").innerText = json.ip;
+                            }
+                        </script>
+                          
+                        <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+                        
+                        <p>
+                            <label class="link2">Pessoa: <input type="radio" name="tipo" value="B2B"> Jurídica <input type="radio" name="tipo" value="B2C" > Física</label>
+                        </p>
+                        
+                        <label class="ocultar">
+                            Hora:  
+                                <select name="data_hora"> 
+                                    <option id="test"></option>
+                                </select>
+                                   <script>
+                                    var date = new Date();
+                                    document.getElementById("test").innerText = (date.getFullYear() + '-' + date.getMonth() + '-' + 
+                                    date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds());
+                                </script>
+                        </label>
+            
+                        <label>
+                            <textarea name="mensagemDuvida" rows="10" cols="50">
+                                Deixe sua Mensagem/Dúvida: 
+                            </textarea>
+                        </label>
+            
+                            <button class="close" type="submit">Enviar</button>
+                        </p>
+                    </form>
+            </div>
+        </div>
+                
         </main>
 
         <footer class="rodape">
@@ -177,14 +217,66 @@ close.onclick = function () {
                     <p>Parceiros</p>
                 </div>
                 <div>
-                    <p><a class="link" class="link" href="./formDuvidas.html">Dúvidas?</a></p>
+                    <p><a class="link" class="link" id="btnFormDuvidas2">Dúvidas?</a></p>
                     <br>
-                    <p><a class="link" href="./formulario-de-duvidas.html">Fale Conosco!</a></p>
+                    <p><a class="link" id="btnFormDuvidas3">Fale Conosco!</a></p>
                     <p>E-mail</p>
                 </div>
             </div>
             <div class="copyright">&copy; VOCÊ EMPREENDIMENTOS</div>
         </footer>
+
+        <script>
+                var modalForms = document.getElementById("formulario");
+                    
+                var button = document.getElementById("btnForm"); 
+                
+                var button2 = document.getElementById("btnForm2");
+    
+                var button3 = document.getElementById("btnForm3");
+                    
+                var close = document.getElementsByClassName("close");
+                    
+                button.onclick = function () {
+                    modalForms.style.display = "block";
+                }
+    
+                button2.onclick = function () {
+                    modalForms.style.display = "block";
+                }
+    
+                button3.onclick = function () {
+                    modalForms.style.display = "block";
+                }
+                    
+                close.onclick = function () {
+                    modal.style.display = "none";
+                }
+            </script>
+    
+            <script>
+                var formDuvidas = document.getElementById("formularioDuvidas");
+                var button = document.getElementById("btnFormDuvidas");
+                var button2 = document.getElementById("btnFormDuvidas2");
+                var button3 = document.getElementById("btnFormDuvidas3");
+                var close = document.getElementsByClassName("close");
+            
+                button.onclick = function () {
+                    formDuvidas.style.display = "block";
+                };
+    
+                button2.onclick = function () {
+                    formDuvidas.style.display = "block";
+                };
+    
+                button3.onclick = function () {
+                    formDuvidas.style.display = "block";
+                };
+            
+                close.onclick = function () {
+                    formDuvidas.style.display = "none";
+                }
+            </script>
     </body>
 
 </html>
