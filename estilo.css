@@ -168,3 +168,12 @@ a:hover {
     justify-content: center;
     align-items: center;
 }
+
+.redesSociais {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
