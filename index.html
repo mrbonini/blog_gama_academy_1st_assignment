@@ -18,6 +18,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>VC Empreendimentos</title>
         <link rel="stylesheet" type="text/css" href="./estilo.css">
+        
     </head>
 
     <body>
@@ -31,11 +32,75 @@
                 <li><a class="link" href="./index.html">HOME</a></li>
                 <li>BLOG</li>
                 <li><a class="link" href="./formulario.html">NEWSLETTER</a></li>
-                <li><a class="link" href="./formulario-de-duvidas.html">CONTATO</a></li>
+                <li><a id="myBtn">CONTATO</a></li>
+                
             </ul>
                         
         </div>
+        <div id="myModal" class="modal">
+        <div class="modalContent">
+            <form method="POST" action="/index.html" data-netlify="true" class="form">
+                    
+                    <p>
+                        <label><b class="link2">Email:</b> <input type="text" name="email"> </label>
+                    </p>
+                    <p>
+                        <label><b class="link2">Nome: </b><input type="text" name="nome"> </label>
+                    </p>
 
+                    <label class="ocultar">
+                        <select name = "ip">
+                            <option id="ip"></option>
+                        </select>
+                    </label>
+                    <script type="application/javascript">
+                        function getIP(json) {
+                        document.getElementById("ip").innerText = json.ip;
+                        }
+                    </script>
+                    
+                    <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+                    
+                    <p>
+                        <label><b class="link2">Pessoa: </b><input type="radio" name="tipo" value="B2B"> Jurídica <input type="radio" name="tipo" 
+                            value="B2C" > Física</label>
+                    </p>
+                    
+                    <label class="ocultar">
+                        Hora:  
+                            <select name="data_hora"> 
+                                <option id="test"></option>
+                            </select>
+                            <script>
+                                var date = new Date();
+                                document.getElementById("test").innerText = (date.getFullYear() + '-' + date.getMonth() + '-' + 
+                                date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds());
+                            </script>
+                        
+                    </label>
+                    
+                    <p>
+                        <button type="submit" class="close">Enviar</button>
+                    </p>
+                
+            </form>
+        </div>
+        </div>
+<script>
+    var modalForms = document.getElementById("myModal");
+
+var button = document.getElementById("myBtn");
+
+var close = document.getElementsByClassName("close");
+
+button.onclick = function () {
+    modalForms.style.display = "block";
+}
+
+close.onclick = function () {
+    modal.style.display = "none";
+}
+</script>
         <div class="bodyForm">
             <span>Se inscreva em nosso site!<br>
             Garanta seu acesso a <b class="negrito">materiais gratuitos</b> sobre empreendedorismo <br>
