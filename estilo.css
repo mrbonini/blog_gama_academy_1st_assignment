@@ -111,6 +111,7 @@ a:hover {
 
 .sideSection {
     width: 20%;
+    flex: 3 3 25px;
    
 }
 
@@ -172,8 +173,10 @@ a:hover {
 .redesSociais {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     
 }
 
+.sideSection {
+    
+}
