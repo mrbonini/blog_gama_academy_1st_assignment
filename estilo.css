@@ -155,18 +155,45 @@ a:hover {
   }
 
 .mainPost > img {
-    width: 30%;
-    height: 30%;
-    border-radius: 25%;
+    width: 20%;
+    height: 20%;
+    border-radius: 45%;
+    display: flex;
+    align-self: flex-start;
+    margin-right: 5%;
+
 }
 
 .mainPost {
     width: auto;
     display: flex;
-    
-    flex-wrap: wrap;
-    margin: 5%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     flex-shrink: 2;
+    margin-bottom: 30px;
+    color: rgb(77, 175, 127);
+}
+a:link {
+    text-decoration: none;
+
+}
+.title {
+    font-size: 25px;
+    color: white;
+    background-color: rgb(77, 175, 127);
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+}
+
+.title > div {
+    display: flex;
+    width: auto;
+    
 }
 
 .form {
