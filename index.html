@@ -28,11 +28,11 @@
 
     <body>
         <div class="header"> 
-            <div class="logo">
-                <img src="./imgRedesSociais/logo.png" class="logo" alt="Logo da empres >> Você Empreendimentos">
-            </div> 
             
-            <div></div>
+            <img class="logo" src="./imgRedesSociais/logo.png" class="logo" alt="Logo da empres >> Você Empreendimentos">
+            
+            
+            
             <ul class="navigation">
                 <li><a class="link" href="./index.html">HOME</a></li>
                 <li>BLOG</li>
@@ -40,7 +40,7 @@
                 <li><a id="btnFormDuvidas">CONTATO</a></li>
                 
             </ul>
-
+        </div>
         <div class="bodyForm">
             <span>Se inscreva em nosso site!<br>
             Garanta seu acesso a <b class="negrito">materiais gratuitos</b> sobre empreendedorismo <br>
@@ -161,7 +161,7 @@
 
         <div id="formularioDuvidas" class="modal">
             <div class="modalContent">
-                    <form class="form" method="POST" action="/index.html" data-netlify="true">
+                    <form class="form" method="POST" action="https://vc-empreendedor.herokuapp.com/api/lead" enctype="application/x-www-form-urlencoded">
                         <p>
                             <label class="link2">Email: <input type="text" name="email"> </label>
                         </p>
