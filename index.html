@@ -96,7 +96,7 @@
                 </div>
                 <div class="redesSociais">
                     <a href="https://www.facebook.com/VoceEmpreendimentos/?epa=SEARCH_BOX" target="_blank"><img class="shrink" src="./imgRedesSociais/facebook.png" alt="logo Facebook"></a>
-                    <a href="https://www.instagram.com/empreendimento.vc/" target="_blank"><img class="shrink" src="./imgRedesSociais/instagram.png" alt="logo Instagram"></a>
+                    <a href="https://www.instagram.com/empreendimentos.vc/" target="_blank"><img class="shrink" src="./imgRedesSociais/instagram.png" alt="logo Instagram"></a>
                 </div>
             </section>
         </div>
@@ -136,7 +136,7 @@
                             
                     <label class="ocultar"> Hora:  
                         <select id="data_hora" name="data_hora"> 
-                            <option id="test" selected></option>
+                            <option id="test" name="data_hora"selected></option>
                         </select>
                         <script>
                             var date = new Date();
@@ -200,12 +200,12 @@
             
                     <label class="ocultar">
                         <select name = "ip">
-                            <option id="ip"></option>
+                            <option id="ipClient"></option>
                         </select>
                     </label>
                     <script type="application/javascript">
                         function getIP(json) {
-                            document.getElementById("ip").innerText = json.ip;
+                            document.getElementById("ipClient").innerText = json.ip;
                         }
                     </script>
                           
@@ -266,8 +266,6 @@
             var button = document.getElementById("btnForm"); 
                 
             var button2 = document.getElementById("btnForm2");
-    
-            var button3 = document.getElementById("btnForm3");
                     
             var close = document.getElementsByClassName("close");
                     
@@ -278,14 +276,10 @@
             button2.onclick = function () {
                 modalForms.style.display = "block";
             }
-    
-            button3.onclick = function () {
-                modalForms.style.display = "block";
-            }
-                    
+                        
             close.onclick = function () {
                 modal.style.display = "none";
-            }
+            };
         </script>
     
         <script>
