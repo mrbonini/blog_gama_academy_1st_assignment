@@ -110,51 +110,94 @@
         <!-- FORMULÁRIOS -->
         <div id="formulario" class="modal">
         <div class="modalContent">
-            <form method="POST" action="https://vc-empreendedor.herokuapp.com/api/lead" enctype="application/x-www-form-urlencoded" class="form">
+                <div class="form">
                     
-                    <p>
-                        <label><b class="link2">Email:</b> <input type="text" name="email"> </label>
-                    </p>
-                    <p>
-                        <label><b class="link2">Nome: </b><input type="text" name="nome"> </label>
-                    </p>
-
-                    <label class="ocultar">
-                        <select name = "ip">
-                            <option id="ip"></option>
-                        </select>
-                    </label>
-                    <script type="application/javascript">
-                        function getIP(json) {
-                        document.getElementById("ip").innerText = json.ip;
-                        }
-                    </script>
-                    
-                    <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
-                    
-                    <p>
-                        <label class="link2"><b class="link2">Pessoa: </b><input type="radio" name="tipo" value="B2B"> Jurídica <input type="radio" name="tipo" 
-                            value="B2C" > Física</label>
-                    </p>
-                    
-                    <label class="ocultar">
-                        Hora:  
-                            <select name="data_hora"> 
-                                <option id="test"></option>
+                        <p>
+                            <label><b class="link2">Email:</b> <input id="email" type="text" name="email"> </label>
+                        </p>
+                        <p>
+                            <label><b class="link2">Nome: </b><input id="nome"type="text" name="nome"> </label>
+                        </p>
+    
+                        <label class="ocultar">
+                            <select name="ip" id="ip">
+                                <option id="ipClient" selected></option>
                             </select>
-                            <script>
-                                var date = new Date();
-                                document.getElementById("test").innerText = (date.getFullYear() + '-' + date.getMonth() + '-' + 
-                                date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds());
-                            </script>
+                        </label>
+                        <script type="application/javascript">
+                            function getIP(json) {
+                            document.getElementById("ipClient").innerText = json.ip;
+                            }
+                        </script>
                         
-                    </label>
+                        <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+                        
+                        <p>
+                            <label class="link2">Pessoa: 
+                                <select id="tipo" name="tipo">    
+                                    <option name="tipo" value="B2B" selected>Jurídica</option>
+                                    <option name="tipo" value="B2C">Física</option>
+                                </select>
+                            </label>
+                        </p>
+                        
+                        <label class="ocultar">
+                            Hora:  
+                                <select id="data_hora" name="data_hora"> 
+                                    <option id="test" selected></option>
+                                </select>
+                                <script>
+                                    var date = new Date();
+                                    document.getElementById("test").innerText = (date.getFullYear() + '-' + date.getMonth() + '-' + 
+                                    date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds());
+                                </script>
+                            
+                        </label>
+                        
+                        <p>
+                            <button id="enviar" type="submit" class="close">Enviar</button>
+                        </p>
                     
-                    <p>
-                        <button type="submit" class="close">Enviar</button>
-                    </p>
-                
-            </form>
+                    
+    
+                </div>
+            </div>
+            </div>
+    
+            <script>
+                    const form = {
+                        email: document.getElementById("email"),
+                        nome: document.getElementById("nome"),
+                        ip: document.getElementById("ip"),
+                        tipo: document.getElementById("tipo"),
+                        data_hora: document.getElementById("data_hora"),
+                        submit: document.getElementById("enviar")
+                            
+                    };
+                            
+                    form.submit.addEventListener('click', function () {
+                        const request = new XMLHttpRequest();
+                            
+                        const requestData = `email=${form.email.value}&nome=${form.nome.value}&ip=${form.ip.value}&tipo=${form.tipo.value}&data_hora=${form.data_hora.value}`
+                            
+                        request.open("POST", "https://vc-empreendedor.herokuapp.com/api/lead");
+                        request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                            
+                        request.send(requestData);
+                                        
+                        request.onreadystatechange = function() {
+                            if (request.readyState == 4 && request.status == 200) {
+                                location.href = "index.html";
+                            }
+                            else {
+                                document.getElementById("enviar").innerText = "TENTE NOVAMENTE!";
+                                }
+                        }
+                                        
+                    })
+                            
+                                    
+                    </script>
         </div>
         </div>
 
