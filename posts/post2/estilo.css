@@ -86,6 +86,8 @@ a:hover {
     width: auto;
     margin: 5px;
     padding: 0;
+    display: flex;
+    justify-content: space-around;
       
 }
 
@@ -113,8 +115,10 @@ a:hover {
     width: auto;
     padding: 10px;
     display: flex;
-    align-self: stretch;
-    
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: stretch;
+        
 }
 
 

@@ -86,6 +86,8 @@ a:hover {
     width: auto;
     margin: 5px;
     padding: 0;
+    display: flex;
+    justify-content: space-around;
       
 }
 
@@ -157,10 +159,10 @@ a:hover {
 .mainPost > img {
     width: 20%;
     height: 20%;
-    border-radius: 45%;
+    border-radius: 10%;
     display: flex;
     align-self: flex-start;
-    margin-right: 5%;
+    margin-right: 5%;    
 
 }
 
