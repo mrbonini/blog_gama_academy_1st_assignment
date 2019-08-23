@@ -33,7 +33,7 @@
                      
             <ul class="navigation">
                 <li><a class="link" href="./index.html">HOME</a></li>
-                <li><a class="link" id="btnForm">NEWSLETTER</a></li>
+                <li><a class="link" id="btnForm" onclick="getDateFunction()">NEWSLETTER</a></li>
                 <li><a class="link" id="btnFormDuvidas">CONTATO</a></li>
                 
             </ul>
@@ -89,6 +89,7 @@
                             </div>
                         </div></a>
                 </article>
+            </section>
              
             <section class="sideSection">
                 <div>
@@ -109,7 +110,7 @@
                         <label><b class="link2">Email:</b> <input id="email" type="text" name="email"> </label>
                     </p>
                     <p>
-                        <label><b class="link2">Nome: </b><input id="nome"type="text" name="nome"> </label>
+                        <label><b class="link2">Nome Completo: </b><input id="nome"type="text" name="nome"> </label>
                     </p>
         
                     <label class="ocultar">
@@ -136,12 +137,28 @@
                             
                     <label class="ocultar"> Hora:  
                         <select id="data_hora" name="data_hora"> 
-                            <option id="test" name="data_hora"selected></option>
+                            <option id="data" name="data_hora"selected></option>
                         </select>
                         <script>
+                            var month = new Array();
+                            month[0] = "01";
+                            month[1] = "02";
+                            month[2] = "03";
+                            month[3] = "04";
+                            month[4] = "05";
+                            month[5] = "06";
+                            month[6] = "07";
+                            month[7] = "08";
+                            month[8] = "09";
+                            month[9] = "10";
+                            month[10] = "11";
+                            month[11] = "12";
+
                             var date = new Date();
-                            document.getElementById("test").innerText = (date.getFullYear() + '-' + date.getMonth() + '-' + 
-                            date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds());
+                            var correctMonth = month[date.getMonth()];
+                                
+                            document.getElementById("data").innerText = (date.getFullYear() + '-' + correctMonth + '-' + 
+                                date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds());
                         </script>
                                 
                     </label>
@@ -195,7 +212,7 @@
                         <label class="link2">Email: <input type="text" name="email"> </label>
                     </p>
                     <p>
-                        <label class="link2">Nome: <input type="text" name="nome"> </label>
+                        <label class="link2">Nome Completo: <input type="text" name="nome"> </label>
                     </p>
             
                     <label class="ocultar">
@@ -217,12 +234,29 @@
                         
                     <label class="ocultar">Hora:  
                         <select name="data_hora"> 
-                            <option id="test"></option>
+                            <option id="data2"></option>
                         </select>
                         <script>
+                            var month = new Array();
+                            month[0] = "01";
+                            month[1] = "02";
+                            month[2] = "03";
+                            month[3] = "04";
+                            month[4] = "05";
+                            month[5] = "06";
+                            month[6] = "07";
+                            month[7] = "08";
+                            month[8] = "09";
+                            month[9] = "10";
+                            month[10] = "11";
+                            month[11] = "12";
+
                             var date = new Date();
-                            document.getElementById("test").innerText = (date.getFullYear() + '-' + date.getMonth() + '-' + 
-                            date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds());
+                            var correctMonth = month[date.getMonth()];
+                                
+                            document.getElementById("data2").innerText = (date.getFullYear() + '-' + correctMonth + '-' + 
+                                date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds());
+
                         </script>
                     </label>
             
