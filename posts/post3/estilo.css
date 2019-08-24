@@ -177,7 +177,8 @@ a:hover {
     align-items: center;
     flex-shrink: 2;
     margin-bottom: 30px;
-    color: rgb(77, 175, 127);
+    color: rgb(83, 120, 93);
+    font-size: 16px;
 }
 a:link {
     text-decoration: none;
